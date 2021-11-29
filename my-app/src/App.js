@@ -18,15 +18,12 @@ function App() {
       <h1>Listar os Personagens</h1>
      
       <ul>
-      <ActionAreaCard>
         {personagens.map((personagem) => {
           return (
-            <li key={personagem.id}>
-              {`${personagem.name} - Species: ${personagem.species} - Status: ${personagem.status}`}
-            </li>
+            <ActionAreaCard key={personagem.id} personagem={personagem}/>
           );
         })}
-        </ActionAreaCard>
+      
       </ul>
     </div>
   );
