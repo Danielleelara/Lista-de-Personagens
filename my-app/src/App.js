@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "./api";
-
+import ActionAreaCard from './Components/Cards'
 function App() {
   const [personagens, setPersonagens] = useState([]);
 
@@ -16,7 +16,9 @@ function App() {
   return (
     <div>
       <h1>Listar os Personagens</h1>
+     
       <ul>
+      <ActionAreaCard>
         {personagens.map((personagem) => {
           return (
             <li key={personagem.id}>
@@ -24,6 +26,7 @@ function App() {
             </li>
           );
         })}
+        </ActionAreaCard>
       </ul>
     </div>
   );
