@@ -1,11 +1,8 @@
 .titulo{
     display: flex;
     justify-content:center;
-    color: blueviolet;
-
-    
+    color: blueviolet;   
 }
-
 .lista{
     display: flex;
     position:relative;
