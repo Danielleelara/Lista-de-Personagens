@@ -4,10 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+//import './Card.css'
 
 export default function ActionAreaCard({personagem}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className="lista"sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -17,7 +18,7 @@ export default function ActionAreaCard({personagem}) {
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" >
+          <Typography gutterBottom variant="h5" component="div">
             <li key={personagem.id}>
               {`${personagem.name}`}
             </li>

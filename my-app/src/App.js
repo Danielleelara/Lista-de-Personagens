@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import api from "./api";
 import ActionAreaCard from './Components/Cards'
 import DenseAppBar from "./Components/AppBar";
-
+import './App.css'; 
 
 
 function App() {
@@ -20,10 +20,9 @@ function App() {
   return (
     <div>
     <DenseAppBar/>
-      <h1>Listar os Personagens</h1>
+      <h1 className="titulo">Listar os Personagens</h1>
      
-      <ul>
-      
+      <ul className="lista">
         {personagens.map((personagem) => {
           return (
             <ActionAreaCard key={personagem.id} personagem={personagem}/>
