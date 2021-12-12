@@ -5,8 +5,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Filter from './Filter/Filter';
 
-export default function DenseAppBar(personagem) {
+
+
+function DenseAppBar(personagem) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="secondary">
@@ -16,9 +19,11 @@ export default function DenseAppBar(personagem) {
           </IconButton>
           <Typography variant="h6" color="inherit" component="div">
             Personagens
+            <Filter className="campoFilter"/>
           </Typography>
         </Toolbar>
       </AppBar>
     </Box>
   );
 }
+export default DenseAppBar

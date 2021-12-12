@@ -13,13 +13,12 @@ function App() {
       const response = await api.get('character/?page=1');
       setPersonagens(response.data.results);
     }
-
     getCharacters();
   }, []);
 
   return (
     <div>
-    <DenseAppBar/>
+      <DenseAppBar/>
       <h1 className="titulo">Listar os Personagens</h1>
      
       <ul className="lista">

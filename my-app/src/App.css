@@ -5,10 +5,11 @@
 }
 .lista{
     display: flex;
-    position:relative;
+    position:relative; 
     flex-wrap: wrap;
     margin: 10px;
     padding: 20px;
     background-color: rgb(161, 160, 160);
     justify-content:center;
 }
+
