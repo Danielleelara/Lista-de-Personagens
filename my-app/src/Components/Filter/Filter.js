@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./Filter.css";
 import api from "../../api";
 
-import { MenuItem, TextField, Autocomplete } from '@mui/material';
+import { MenuItem, TextField } from '@mui/material';
 function Filter() {
   const [cards, setCards] = useState([]);
   
