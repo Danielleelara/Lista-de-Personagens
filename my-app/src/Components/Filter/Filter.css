@@ -1,8 +1,6 @@
 .campoFilter{
     display: flex;
-    flex-wrap:inherit;
+    flex-wrap:nowrap;
     background-color:beige;
-    color:aquamarine
-
-
+    width: 250px;
 }

@@ -8,7 +8,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Filter from './Filter/Filter';
 
 
-
 function DenseAppBar(personagem) {
   return (
     <Box sx={{ flexGrow: 1 }}>

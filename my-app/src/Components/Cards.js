@@ -19,7 +19,7 @@ export default function ActionAreaCard({personagem}) {
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             <li key={personagem.id}>
-              {`${personagem.name}`}
+              {`Nome: ${personagem.name}`}
             </li>
             <li>
               {`Specie: ${personagem.species}`}
