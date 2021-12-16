@@ -17,6 +17,7 @@ function App() {
   }, []);
 
   return (
+
     <div>
       <DenseAppBar/>
       <h1 className="titulo">Listar os Personagens</h1>
@@ -24,7 +25,7 @@ function App() {
       <ul className="lista">
         {personagens.map((personagem) => {
           return (
-            <ActionAreaCard key={personagem.id} personagem={personagem}/>
+              <ActionAreaCard key={personagem.id} personagem={personagem}/>
           );
         })}
       

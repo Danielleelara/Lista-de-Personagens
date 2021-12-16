@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-export default function ActionAreaCard({personagem}) {
+function ActionAreaCard({personagem}) {
   return (
     <Card className="lista"sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -37,3 +37,4 @@ export default function ActionAreaCard({personagem}) {
     </Card>
   );
 }
+export default ActionAreaCard
