@@ -8,8 +8,6 @@ function Personagem (){
     const[personagem, setPersonagem] = useState();
     
     useEffect(() => {
-
-      
         async function getCharacter() {
           const response = await api.get(`characters/${id}`);
           setPersonagem(response.data);
@@ -17,6 +15,7 @@ function Personagem (){
         getCharacter();
       }, [id]);
       console.log('PERSONAGEM', personagem)
+
     return(
         
         <ActionAreaCard personagem={personagem} />

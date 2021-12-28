@@ -8,7 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Filter from './Filter/Filter';
 
 
-function DenseAppBar(personagem) {
+function DenseAppBar({personagens}) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="secondary">
@@ -18,7 +18,7 @@ function DenseAppBar(personagem) {
           </IconButton>
           <Typography variant="h6" color="inherit" component="div">
             Personagens
-            <Filter className="campoFilter"/>
+            <Filter className="campoFilter" personagens={personagens}/>
           </Typography>
         </Toolbar>
       </AppBar>

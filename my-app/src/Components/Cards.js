@@ -5,8 +5,9 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import * as React from 'react';
 
-function ActionAreaCard({personagem}) {
 
+function ActionAreaCard({personagem}) {
+  
   return (
     <Card className="lista"sx={{ maxWidth: 345 }}>
       <CardActionArea>
