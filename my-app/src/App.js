@@ -1,39 +1,24 @@
-import React, { useEffect, useState } from "react";
-import api from "./api";
-import ActionAreaCard from './Components/Cards'
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import DenseAppBar from "./Components/AppBar";
-import './App.css'; 
-
+import Home from "./pages/Home";
+import Personagem from "./pages/Personagem";
 
 function App() {
-  const [personagens, setPersonagens] = useState([]);
-
-  useEffect(() => {
-    async function getCharacters() {
-      const response = await api.get('character/?page=1');
-      setPersonagens(response.data.results);
-    }
-    getCharacters();
-  }, []);
-
   return (
-
-    <div>
-      <DenseAppBar/>
-      <h1 className="titulo">Listar os Personagens</h1>
-     
-      <ul className="lista">
-        {personagens.map((personagem) => {
-          return (
-              <ActionAreaCard key={personagem.id} personagem={personagem}/>
-          );
-        })}
-      
-      </ul>
-    </div>
+    <Router>
+      <DenseAppBar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/personagem/:id">
+          <Personagem />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
-
-

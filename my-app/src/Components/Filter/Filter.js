@@ -14,8 +14,6 @@ function Filter() {
     }
     getCharacters();
   }, []);
-console.log(cards)
-
   return (
     <TextField 
     className="campoFilter"
@@ -25,7 +23,7 @@ console.log(cards)
     <MenuItem value="">
       <em>Limpar</em>
     </MenuItem>
-      {cards.map(card => <MenuItem value={ card }>{ card.name }</MenuItem>)}
+      {cards.map(card => <MenuItem key={card.id} value={ card }>{ card.name }</MenuItem>)}
     </TextField>
   );
 }
