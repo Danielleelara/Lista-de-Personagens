@@ -1,6 +1,6 @@
 .campoFilter{
     display: flex;
-    flex-wrap:nowrap;
+    justify-content:flex-end; 
     background-color:beige;
     width: 250px;
 }

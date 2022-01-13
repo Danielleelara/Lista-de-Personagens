@@ -1,21 +1,43 @@
-import * as React from "react";
 import "./Filter.css";
 
 import { MenuItem, TextField } from '@mui/material';
 
-function Filter({personagens}) {
+function Filter({personagens, onFilterChange, onFilterSpecie}) {
   
   return (
-    <TextField 
-    className="campoFilter"
-    select
-    label="Escolha o seu personagem"
-    >
-    <MenuItem value="">
-      <em>Limpar</em>
-    </MenuItem>
-      {personagens.map(card => <MenuItem key={card.id} value={ card }>{ card.name }</MenuItem>)}
-    </TextField>
+    <>
+
+    
+      <TextField
+        className="campoFilter"
+        select
+        label="Escolha o seu personagem"
+        onChange={onFilterChange}
+      >
+        <MenuItem value="">
+          <em>Limpar</em>
+        </MenuItem>
+        {personagens.map(card => <MenuItem key={card.id} value={card}>{card.name}</MenuItem>)}
+      </TextField><TextField
+        className="campoFilter"
+        select
+        label="Escolha a espécie"
+        onChange={onFilterSpecie}
+      >
+        <MenuItem value="">
+            <em>Limpar</em>
+          </MenuItem>
+          <MenuItem value="Human">
+            <em>Human</em>
+          </MenuItem>
+          <MenuItem value="Alien">
+            <em>Alien</em>
+          </MenuItem>
+         
+         
+        </TextField>
+      
+      </>
   );
 }
 

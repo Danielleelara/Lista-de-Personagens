@@ -1,0 +1,13 @@
+.box-container {
+    display: flex;
+    /* flex-direction: space-around;
+    background-color: #fff; */
+
+}
+
+.app-bar-container{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
