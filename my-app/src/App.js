@@ -23,20 +23,19 @@ function App() {
     const personagemAtual = event.target.value;
     const personagemFiltrados = personagens.filter((personagem) => {
       return personagemAtual.id === personagem.id 
-
     })
     setPersonagensFiltrados(personagemFiltrados);
   }
 
   function handleSelectedSpecies (event) {
-    const especie = event.target.value;
-    const personagemFiltrados = personagens.filter((personagem) => {
-      return especie.species === personagem.species 
+    const personagemAtual = event.target.value;
+    const personagemFiltrados =personagens.filter((personagem) => {
+      return personagemAtual.species === personagem.species 
 
     })
     setPersonagensFiltrados(personagemFiltrados);
-    
   }
+
 
   return (
 

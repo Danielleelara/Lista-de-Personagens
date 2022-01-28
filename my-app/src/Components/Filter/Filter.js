@@ -4,10 +4,9 @@ import { MenuItem, TextField } from '@mui/material';
 
 function Filter({personagens, onFilterChange, onFilterSpecie}) {
   
-  return (
-    <>
 
-    
+  return (
+    <> 
       <TextField
         className="campoFilter"
         select
@@ -18,7 +17,9 @@ function Filter({personagens, onFilterChange, onFilterSpecie}) {
           <em>Limpar</em>
         </MenuItem>
         {personagens.map(card => <MenuItem key={card.id} value={card}>{card.name}</MenuItem>)}
-      </TextField><TextField
+      </TextField>
+      
+      <TextField
         className="campoFilter"
         select
         label="Escolha a espécie"
@@ -27,14 +28,8 @@ function Filter({personagens, onFilterChange, onFilterSpecie}) {
         <MenuItem value="">
             <em>Limpar</em>
           </MenuItem>
-          <MenuItem value="Human">
-            <em>Human</em>
-          </MenuItem>
-          <MenuItem value="Alien">
-            <em>Alien</em>
-          </MenuItem>
-         
-         
+          {(personagens.map(card => <MenuItem key={card.id} value={card}>{(card.species)}</MenuItem>))}
+        
         </TextField>
       
       </>
@@ -42,3 +37,4 @@ function Filter({personagens, onFilterChange, onFilterSpecie}) {
 }
 
 export default Filter;
+
