@@ -15,8 +15,8 @@ function ActionAreaCard({personagem}) {
           component="img"
           height="400"
           margin="20"
-          image={personagem.image}
-          alt="green iguana"
+         image={personagem.image}
+         alt="green iguana"
         />  
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

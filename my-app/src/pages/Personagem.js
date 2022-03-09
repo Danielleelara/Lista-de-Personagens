@@ -17,8 +17,16 @@ function Personagem (){
       console.log('PERSONAGEM', personagem)
 
     return(
+      
+        <ActionAreaCard 
+          personagem={personagem} 
+          component="img"
+          height="400"
+          margin="20"
+         image={personagem.image}
+         alt="green iguana"
         
-        <ActionAreaCard personagem={personagem} />
+        />
     )
 }
 
